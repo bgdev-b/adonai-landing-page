@@ -1,0 +1,49 @@
+---
+const reasons = [
+	{
+		title: 'Experiencia Comprobada',
+		description:
+			'Más de 10 años documentando historias únicas, con cientos de sesiones y bodas capturadas con pasión.',
+	},
+	{
+		title: 'Calidad y Compromiso',
+		description:
+			'Cada sesión está cuidadosamente planificada de principio a fin para superar tus expectativas.',
+	},
+	{
+		title: 'Adaptabilidad y Personalización',
+		description:
+			'Mi estilo se ajusta a tu visión y necesidades específicas. Tu historia merece un enfoque único.',
+	},
+	{
+		title: 'Enfoque Creativo',
+		description:
+			'Los momentos más bellos e inolvidables son espontáneos, pero con una planificación creativa se vuelven eternos.',
+	},
+];
+---
+
+<div class="container mx-auto px-6">
+	<div class="max-w-2xl mx-auto text-center mb-16 scroll-fade-up">
+		<p class="text-xs tracking-[0.4em] uppercase text-gray-400 mb-4">Por qué elegirme</p>
+		<h2 class="text-3xl md:text-4xl font-bold mb-4">Razones para elegirme como tu fotógrafo</h2>
+		<p class="text-gray-500 leading-relaxed">
+			Elegir al fotógrafo adecuado marca la diferencia a la hora de capturar las mejores fotos
+			posibles.
+		</p>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+		{
+			reasons.map((reason, i) => (
+				<div
+					class={`text-center p-8 bg-white border border-gray-100 hover:shadow-md transition-shadow duration-300 scroll-fade-up stagger-${i + 1}`}
+				>
+					<div class="text-4xl font-bold text-gray-100 mb-4">{String(i + 1).padStart(2, '0')}</div>
+					<h3 class="text-base font-bold uppercase tracking-wider mb-3">{reason.title}</h3>
+					<p class="text-gray-500 text-sm leading-relaxed">{reason.description}</p>
+				</div>
+			))
+		}
+	</div>
+</div>

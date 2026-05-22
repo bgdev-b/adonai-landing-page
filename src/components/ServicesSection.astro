@@ -1,0 +1,54 @@
+---
+import siteConfig from '../../site.config.mjs';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const services = [
+	{ name: 'Bodas', href: `${base}/collections` },
+	{ name: 'Sesión de novios', href: `${base}/collections` },
+	{ name: 'Quinceañeras', href: `${base}/collections` },
+	{ name: 'Embarazadas', href: `${base}/collections` },
+	{ name: 'Retratos', href: `${base}/collections` },
+	{ name: 'Familiar', href: `${base}/collections` },
+	{ name: 'Graduación', href: `${base}/collections` },
+	{ name: 'Infantiles', href: `${base}/collections` },
+	{ name: 'Eventos corporativos', href: `${base}/collections` },
+	{ name: 'Retratos corporativos', href: `${base}/collections` },
+];
+---
+
+<div class="container mx-auto px-6">
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+		<div class="scroll-fade-right">
+			<p class="text-xs tracking-[0.4em] uppercase text-gray-400 mb-4">Lo que hago</p>
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">Lo que me apasiona hacer</h2>
+			<p class="text-gray-600 leading-relaxed mb-8">
+				Como fotógrafo profesional, me he especializado en ofrecer una gran variedad de servicios
+				que van desde bodas y embarazadas hasta eventos corporativos. Siempre estoy abierto al
+				diálogo para adaptar nuestro enfoque a tus deseos individuales.
+			</p>
+			<a
+				href={`${base}/collections`}
+				class="inline-block px-8 py-4 bg-black text-white font-medium tracking-widest uppercase text-sm
+                       hover:bg-gray-800 transition-all duration-300"
+			>
+				Ver todos los servicios
+			</a>
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 scroll-fade-left">
+			{
+				services.map((service) => (
+					<a
+						href={service.href}
+						class="flex items-center gap-3 py-3 px-4 border border-gray-200 text-gray-700
+                               hover:border-black hover:text-black transition-all duration-200 text-sm tracking-wide group"
+					>
+						<span class="w-4 h-[1px] bg-gray-400 group-hover:bg-black transition-colors duration-200" />
+						{service.name}
+					</a>
+				))
+			}
+		</div>
+	</div>
+</div>

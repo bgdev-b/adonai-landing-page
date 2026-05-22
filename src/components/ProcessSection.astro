@@ -1,0 +1,74 @@
+---
+const steps = [
+	{
+		number: '01',
+		title: 'Hablemos de tu sesión',
+		subtitle: 'Acomódate y escríbeme tus ideas',
+		description:
+			'Si te ha gustado lo que ves, lo ideal sería que me escribas para ver si soy el fotógrafo que buscas y si tú eres nuestro cliente ideal para capturar tus momentos y recuerdos.',
+	},
+	{
+		number: '02',
+		title: 'Tu fecha reservada',
+		subtitle: 'Aquí es donde todo florece',
+		description:
+			'Una vez completados los pasos de reserva, es momento de prepararnos para tu día especial. Estaré feliz de ayudarte con toda mi experiencia para capturar cada momento.',
+	},
+	{
+		number: '03',
+		title: 'Llegó tu sesión de fotos',
+		subtitle: 'Vamos a obtener lo mejor de ti',
+		description:
+			'Tu gran momento ha llegado. Me ocuparé de que el rato que pasemos juntos sea genial y de capturar fotos extraordinarias para ti con toda la planificación previa.',
+	},
+	{
+		number: '04',
+		title: 'A disfrutar tus fotos',
+		subtitle: 'Prepárate para la mejor parte',
+		description:
+			'Recibirás tus fotos mediante una galería en línea para hacer la selección de tus momentos favoritos. Tendrás tiempo suficiente para revisarlas una y otra vez.',
+	},
+	{
+		number: '05',
+		title: 'Llegó tu entrega especial',
+		subtitle: 'Feliz día de la entrega',
+		description:
+			'Cuando todo está listo, llega mi parte favorita: la entrega. Es como recibir un regalo especial, pero aún más valioso, porque son tus propios recuerdos capturados con dedicación.',
+	},
+];
+---
+
+<div class="container mx-auto px-6">
+	<div class="max-w-2xl mx-auto text-center mb-16 scroll-fade-up">
+		<p class="text-xs tracking-[0.4em] uppercase text-gray-400 mb-4">Cómo trabajamos</p>
+		<h2 class="text-3xl md:text-4xl font-bold">Conoce mi proceso</h2>
+	</div>
+
+	<div class="space-y-0">
+		{
+			steps.map((step, i) => (
+				<div
+					class={`grid grid-cols-1 md:grid-cols-2 gap-0 ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+				>
+					<div
+						class={`flex items-start gap-8 p-10 md:p-16 ${i % 2 === 1 ? 'md:order-2 scroll-fade-left' : 'scroll-fade-right'}`}
+					>
+						<span class="text-7xl font-bold text-gray-100 leading-none select-none shrink-0">
+							{step.number}
+						</span>
+						<div>
+							<p class="text-xs tracking-[0.3em] uppercase text-gray-400 mb-2">{step.subtitle}</p>
+							<h3 class="text-xl md:text-2xl font-bold mb-4">{step.title}</h3>
+							<p class="text-gray-500 leading-relaxed text-sm">{step.description}</p>
+						</div>
+					</div>
+
+					<div
+						class={`hidden md:block bg-gray-50 ${i % 2 === 1 ? 'md:order-1' : ''}`}
+						aria-hidden="true"
+					/>
+				</div>
+			))
+		}
+	</div>
+</div>

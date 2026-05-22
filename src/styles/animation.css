@@ -1,0 +1,211 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-left {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-right {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        max-height: 500px;
+        transform: translateY(0);
+    }
+}
+
+/* Clases de entrada */
+.fade-in {
+    animation: fade-in 1200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.fade-up {
+    animation: fade-up 1400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.fade-down {
+    animation: fade-down 1400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.fade-left {
+    animation: fade-left 1400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.fade-right {
+    animation: fade-right 1400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.float {
+    animation: float 4500ms cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.pulse-slow {
+    animation: pulse-slow 3500ms cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scroll-triggered (añadir .visible con IntersectionObserver) */
+.scroll-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1200ms cubic-bezier(0.16, 1, 0.3, 1), transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-fade-down {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 1200ms cubic-bezier(0.16, 1, 0.3, 1), transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-fade-left {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 1200ms cubic-bezier(0.16, 1, 0.3, 1), transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-fade-right {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 1200ms cubic-bezier(0.16, 1, 0.3, 1), transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-fade-down.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger delays */
+.stagger-1 {
+    transition-delay: 100ms;
+}
+
+.stagger-2 {
+    transition-delay: 200ms;
+}
+
+.stagger-3 {
+    transition-delay: 300ms;
+}
+
+.stagger-4 {
+    transition-delay: 400ms;
+}
+
+.stagger-5 {
+    transition-delay: 500ms;
+}
+
+.stagger-6 {
+    transition-delay: 600ms;
+}
+
+.stagger-7 {
+    transition-delay: 700ms;
+}
+
+.stagger-8 {
+    transition-delay: 800ms;
+}
+
+.stagger-9 {
+    transition-delay: 900ms;
+}
