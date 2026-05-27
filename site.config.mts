@@ -9,11 +9,11 @@ export interface SocialLink {
 
 export default {
 	title: 'Adonai Diaz Photography',
-	favicon: 'images/logo-color.png',
+	favicon: 'images/logo-background.png',
 	owner: 'Adonai Diaz',
 	logo: '/images/logo-black.png',
 	logoLight: '/images/logo-white.png',
-	logoColor: '/images/logo-color.png',
+	logoColor: '/images/logo-background.png',
 	profileImage: 'profile.webp',
 	heroImage: '/images/hero.jpg',
 	phone: '(809) 000-0000',
